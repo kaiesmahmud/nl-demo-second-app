@@ -7,15 +7,15 @@
         {
             name:"Women's Collection",url:"/women-collection"
         },
-        {
-            name:"Custom Jewelry",url:"/custom-jewelry"
-        },
-        {
-            name:"Special Offer",url:"/special-offer"
-        },
-        {
-            name:"Contact Us",url:"/contact"
-        },
+        // {
+        //     name:"Custom Jewelry",url:"/custom-jewelry"
+        // },
+        // {
+        //     name:"Special Offer",url:"/special-offer"
+        // },
+        // {
+        //     name:"Contact Us",url:"/contact"
+        // },
         {
             name:"About US",url:"/about"
         },
@@ -24,12 +24,12 @@
         {
             name:"My Account",
             icon: "octicon:person-24",
-            url:"/dashboard"
+            url:"https://traxnyc-demo-main.vercel.app/dashboard"
         },
         {
             name:"My Cart",
             icon: "mdi-light:cart",
-            url:"/cart"
+            url:"https://traxnyc-demo-main.vercel.app/cart"
         },
     ]
     let navItemStyle = "py-1 md:py-2 px-2 md:px-3 lg:px-5 lg:py-3  text-sm  transition-all ease-in"
