@@ -72,7 +72,7 @@
             <div class="w-10">
                 <img src="https://d186vdbjetg11u.cloudfront.net/static/media/logo.d6d00ab41593f9e46540095c8affeac4.svg" alt="TRAXNYC">
             </div>
-            <h1 class=" font-light text-lg md:text-xl lg:text-3xl">TRAXNYC</h1>
+            <h1 class=" font-light text-lg md:text-xl lg:text-3xl">Webshop-B</h1>
         </a>
         <div class="w-[25%] hidden lg:flex border rounded border-blue-200">
             <input type="text" class="p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-white sm:text-sm sm:leading-6" placeholder="Search Jewelry">
