@@ -33,7 +33,7 @@
         },
     ]
     let navItemStyle = "py-1 md:py-2 px-2 md:px-3 lg:px-5 lg:py-3  text-sm  transition-all ease-in"
-    let myLinksStyle = "flex gap-3 md:gap-0 items-center md:justify-center px-3 py-1 font-semibold transition-all ease-in rounded-full  lg:bg-white hover:bg-red-200 "
+    let myLinksStyle = "flex gap-3 md:gap-0 items-center md:justify-center px-3 py-1 font-semibold transition-all ease-in rounded-full  lg:bg-white hover:bg-blue-200 "
 
     let showNav = false ;
     const handleNav = ()=> showNav=!showNav
