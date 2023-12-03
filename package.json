@@ -19,6 +19,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@splidejs/svelte-splide": "^0.2.9"
+		"@splidejs/svelte-splide": "^0.2.9",
+		"@tailwindcss/forms": "^0.5.7"
 	}
 }
