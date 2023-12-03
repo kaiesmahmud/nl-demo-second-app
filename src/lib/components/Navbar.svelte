@@ -45,7 +45,7 @@
 <div class="bg-white text-xs relative z-[101] ">
     <div class="flex items-center justify-between px-3 md:px-5 md:py-2 pb-1">
         <div class="flex items-center gap-3">
-            <div class="text-sm text-red-500">
+            <div class="text-sm text-blue-500">
                 <Icon icon="carbon:location" />
             </div>
             21ST, City name here
@@ -59,7 +59,7 @@
                     <Icon icon="teenyicons:down-outline" />
                 </div>
             </div>
-            <button class="flex gap-1 bg-red-100 hover:bg-red-600 hover:text-white rounded shadow px-3 py-2 transition-all ease-in ">
+            <button class="flex gap-1 bg-blue-100 hover:bg-blue-600 hover:text-white rounded shadow px-3 py-2 transition-all ease-in ">
                 <div >
                     Sign Up
                 </div>
@@ -67,22 +67,22 @@
         </div>
 
     </div>
-    <div class=" p-2 md:p-4 flex items-center justify-between md:px-10 border-t-2 border-red-100">
+    <div class=" p-2 md:p-4 flex items-center justify-between md:px-10 border-t-2 border-blue-100">
         <a href="/" class="flex items-center gap-1 md:gap-5">
             <div class="w-10">
                 <img src="https://d186vdbjetg11u.cloudfront.net/static/media/logo.d6d00ab41593f9e46540095c8affeac4.svg" alt="TRAXNYC">
             </div>
             <h1 class=" font-light text-lg md:text-xl lg:text-3xl">TRAXNYC</h1>
         </a>
-        <div class="w-[25%] hidden lg:flex border rounded border-red-200">
+        <div class="w-[25%] hidden lg:flex border rounded border-blue-200">
             <input type="text" class="p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-white sm:text-sm sm:leading-6" placeholder="Search Jewelry">
-            <button class="text-xl md:text-2xl lg:text-3xl bg-red-100 rounded p-2">
+            <button class="text-xl md:text-2xl lg:text-3xl bg-blue-100 rounded p-2">
                 <Icon icon="material-symbols-light:search" />
             </button>
         </div>
         <div class="flex items-center">
             <a href="tel:123123123" class=" hidden p-5 md:flex items-center gap-3 font-bold">
-                <div class="text-xl md:text-2xl text-red-500">
+                <div class="text-xl md:text-2xl text-blue-500">
                     <Icon icon="fluent:call-20-regular" />
                 </div>
                 <p class="hidden lg:inline-block">123 456 7890</p>
@@ -90,7 +90,7 @@
             <div class="flex items-center gap-2 md:gap-4">
                 {#each myLinks as item(item.name)}
                      <a href={item.url} class={myLinksStyle}>
-                         <div class="text-xl md:text-2xl text-red-500">
+                         <div class="text-xl md:text-2xl text-blue-500">
                              <Icon icon={item.icon} />
                          </div>
                          <p class=" hidden lg:inline-block font-light">{item.name}</p>
@@ -108,10 +108,10 @@
         </div>
         
     </div>
-    <div class=" flex items-center justify-between  md:px-10 border-t-2 border-red-500">
+    <div class=" flex items-center justify-between  md:px-10 border-t-2 border-blue-500">
         <div class=" hidden md:flex items-center gap-1">
             {#each navItems as item(item.name)}
-            <a href={item.url} class={` border-b-4 border-white hover:border-red-500 hover:text-red-600 ${navItemStyle}`}>{item.name}</a>
+            <a href={item.url} class={` border-b-4 border-white hover:border-blue-500 hover:text-blue-600 ${navItemStyle}`}>{item.name}</a>
             {/each}
         </div>
         
@@ -132,7 +132,7 @@
             </div>
             <div class="flex flex-col my-10 p-5">
                 {#each navItems as item(item.name)}
-                <a href={item.url} class={`${navItemStyle} m-3 border-b-2 border-red-500 `} on:click={handleNav}>{item.name}</a>
+                <a href={item.url} class={`${navItemStyle} m-3 border-b-2 border-blue-500 `} on:click={handleNav}>{item.name}</a>
                 {/each}
             </div>
             <div class=" mt-20 flex items-center justify-around">
@@ -148,56 +148,3 @@
          </div>
     {/if}
 </div>
-<!-- -----Fixed Navbar------- -->
- <!-- <section class=" fixed top-0  w-full lg:w-[80%] bg-white z-[101]">
-    <div class=" p-2 md:p-4 flex items-center justify-between md:px-10 border-t-2 border-red-100">
-        <a href="/" class="flex items-center gap-1 md:gap-5">
-            <div class="w-10">
-                <img src="https://d186vdbjetg11u.cloudfront.net/static/media/logo.d6d00ab41593f9e46540095c8affeac4.svg" alt="TRAXNYC">
-            </div>
-            <h1 class=" font-light text-lg md:text-xl lg:text-3xl">TRAXNYC</h1>
-        </a>
-        <div class="w-[25%] hidden lg:flex border rounded border-red-200">
-            <input type="text" class=" w-full rounded p-2 " placeholder="Search Jewelry">
-            <button class="text-xl md:text-2xl lg:text-3xl bg-red-100 rounded p-2">
-                <Icon icon="material-symbols-light:search" />
-            </button>
-        </div>
-        <div class="flex items-center">
-            <a href="tel:123123123" class=" hidden p-5 md:flex items-center gap-3 font-bold">
-                <div class="text-xl md:text-2xl text-red-500">
-                    <Icon icon="fluent:call-20-regular" />
-                </div>
-                <p class="hidden lg:inline-block">123 456 7890</p>
-            </a>
-            <div class="flex items-center gap-2 md:gap-4">
-                {#each myLinks as item(item.name)}
-                     <a href={item.url} class={myLinksStyle}>
-                         <div class="text-xl md:text-2xl text-red-500">
-                             <Icon icon={item.icon} />
-                         </div>
-                         <p class=" hidden lg:inline-block font-light">{item.name}</p>
-                     </a>
-                {/each}
-            </div>
-            
-            <div class=" md:hidden">
-                {#if !showNav}
-                    <button on:click={handleNav} class="text-4xl md:hidden">
-                        <Icon icon="jam:menu" />
-                    </button>            
-                {/if}
-            </div>
-        </div>
-        
-    </div>
-    <div class=" flex items-center justify-between  md:px-10 border-t-2 border-red-500">
-        <div class=" hidden md:flex items-center gap-1">
-            {#each navItems as item(item.name)}
-            <a href={item.url} class={` border-b-4 border-white hover:border-red-500 hover:text-red-600 ${navItemStyle}`}>{item.name}</a>
-            {/each}
-        </div>
-        
-
-    </div>
- </section> -->

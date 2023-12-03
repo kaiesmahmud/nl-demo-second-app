@@ -36,9 +36,9 @@
             </div>
             {#if matched}
                  <!-- content here -->
-                 <button disabled class="bg-red-500 p-5 font-bold text-white rounded ">Product Already Added</button>
+                 <button disabled class="bg-blue-500 p-5 font-bold text-white rounded ">Product Already Added</button>
             {:else}
-                 <button on:click={handleAddtoCart} class="bg-red-500 p-5 font-bold text-white rounded hover:bg-red-600">In my Shopping Cart</button>
+                 <button on:click={handleAddtoCart} class="bg-blue-500 p-5 font-bold text-white rounded hover:bg-blue-600">In my Shopping Cart</button>
             {/if}
         </div>
     </div>

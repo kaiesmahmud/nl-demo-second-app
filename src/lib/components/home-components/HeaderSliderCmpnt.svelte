@@ -1,5 +1,4 @@
 <script>
-	import { HomePageData } from './../../store/dummydata.js';
     import { Splide, SplideSlide } from '@splidejs/svelte-splide';
     // Default theme
     import '@splidejs/svelte-splide/css';

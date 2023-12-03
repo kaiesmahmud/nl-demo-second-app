@@ -12,7 +12,7 @@
 </script>
 <div class=" mb-5 text-sm flex gap-5 flex-col md:flex-row">
     <!-- ==========Left Side=============== -->
-    <div class="w-full md:w-1/4 rounded bg-gray-100/50 p-3 md:p-5 text-xs md:text-sm">
+    <div class="w-full md:w-1/4 rounded bg-blue-100/50 p-3 md:p-5 text-xs md:text-sm">
         <p class="text-lg font-semibold p-3">Jewelry</p>
         <div class="flex flex-col gap-3">
             {#each jwlry as i}
@@ -33,7 +33,7 @@
         </div>
     </div>
     <!-- ==========Right Side=============== -->
-    <div class="w-full md:w-3/4 rounded bg-gray-100/30 p-3 md:p-5 grid grid-cols-2 lg:grid-cols-3">
+    <div class="w-full md:w-3/4 rounded bg-blue-100/30 p-3 md:p-5 grid grid-cols-2 lg:grid-cols-3">
     {#each $allProductsData as {p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}}
         <a href={`/${cat_name}/${p_url}`} class="shadow-lg bg-white m-3 md:m-5 rounded-2xl overflow-hidden group">
             <div class="relative w-full ">
