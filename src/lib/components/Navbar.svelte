@@ -49,7 +49,7 @@
             <div class="w-10">
                 <img src="https://d186vdbjetg11u.cloudfront.net/static/media/logo.d6d00ab41593f9e46540095c8affeac4.svg" alt="TRAXNYC">
             </div>
-            <h1 class=" font-light text-lg md:text-xl lg:text-3xl">Webshop-B</h1>
+            <h1 class=" font-light text-lg md:text-xl lg:text-3xl">ISW Netherlands</h1>
         </a>
         <div class=" hidden md:flex items-center gap-1">
             {#each navItems as item(item.name)}
