@@ -160,4 +160,5 @@ export let confirmedOrder = writable([])
 
 export let myPurchaseProductsData = writable([])
 export let product_url = writable("")
+export let product_details = writable({})
 
