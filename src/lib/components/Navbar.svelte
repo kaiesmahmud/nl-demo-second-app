@@ -67,7 +67,7 @@
         </div>
         
     </div>
-    <div class=" flex items-center justify-between  md:px-10 pb-5">
+    <div class="hidden md:flex items-center justify-between  md:px-10 pb-5">
         <div class="flex items-center">
             <div class="flex items-center gap-2 md:gap-4">
                 {#each myLinks as item(item.name)}
