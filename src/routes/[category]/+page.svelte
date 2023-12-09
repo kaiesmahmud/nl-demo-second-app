@@ -35,7 +35,7 @@
     <!-- ==========Right Side=============== -->
     <div class="w-full md:w-3/4 rounded bg-blue-100/30 p-3 md:p-5 grid grid-cols-2 lg:grid-cols-3">
     {#each $allProductsData as {p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}}
-        <a href={`/${cat_name}/${p_url}`} class="shadow-lg bg-white m-3 md:m-5 rounded-2xl overflow-hidden group">
+        <a href={`/${cat_name}/${p_id}`} class="shadow-lg bg-white m-3 md:m-5 rounded-2xl overflow-hidden group  flex flex-col justify-between">
             <div class="relative w-full ">
                 <div class=" relative object-center aspect-square overflow-hidden rounded flex items-center justify-center bg-white p-1">
                     <img src={p_img} alt={p_name} class=" group-hover:scale-110 rounded hover:scale-110 transition-all ease-in">
