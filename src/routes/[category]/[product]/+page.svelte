@@ -1,4 +1,5 @@
 <script>
+	import { storeCartToLocalStorage } from './../../../lib/function/storeCartToLocalStorage.js';
     import { allProductsData, product_url ,myCartData} from "../../../lib/store/store";
     
     const product = $allProductsData.filter(p=> p.p_url == $product_url)[0];
@@ -12,6 +13,7 @@
             alert("Product already added to cart")
             return
         }else{
+            storeCartToLocalStorage(product)
             myCartData.update(cart=> [...cart,product])
             console.log("Cart Updated-", $myCartData)
         }
