@@ -16,5 +16,13 @@ export const storeCartToLocalStorage = (singleCart)=>{
 
 }
 
-
+export const redirectToMainCart =()=>{
+  const getCart = localStorage.getItem("cart");
+  const host = `http://localhost:5174/cart?data="${getCart}"`
+  if(getCart){
+    console.log(getCart)
+    console.log("url should be - ", host)
+    // location.href = "https://www.google.com"
+  }
+}
 
