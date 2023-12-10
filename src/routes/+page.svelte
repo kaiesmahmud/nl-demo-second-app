@@ -1,22 +1,21 @@
 <script>
-    import Icon from '@iconify/svelte';
-    import HeaderSliderCmpnt from '../lib/components/home-components/HeaderSliderCmpnt.svelte';
-    import CelebritySlider from '../lib/components/home-components/CelebritySlider.svelte';
-    import ServiceSection from '../lib/components/home-components/ServiceSection.svelte';
+    // import HeaderSliderCmpnt from '../lib/components/home-components/HeaderSliderCmpnt.svelte';
+    // import CelebritySlider from '../lib/components/home-components/CelebritySlider.svelte';
+    // import ServiceSection from '../lib/components/home-components/ServiceSection.svelte';
     import CollectionSlider from '../lib/components/home-components/CollectionSlider.svelte';
-    import { menCollectionData, womenCollectionData } from '../lib/store/dummydata';
+    // import { menCollectionData, womenCollectionData } from '../lib/store/dummydata';
     import Support from '../lib/components/Support.svelte';
     import { allProductsData } from '../lib/store/store';
-    import HeroSection from '../lib/components/home-components/HeroSection.svelte';
+    // import HeroSection from '../lib/components/home-components/HeroSection.svelte';
     import PopularCat from '../lib/components/home-components/PopularCat.svelte';
     import SaphireCollection from '../lib/components/home-components/SaphireCollection.svelte';
     import HotDeals from '../lib/components/home-components/HotDeals.svelte';
     import YoutubeVideo from '../lib/components/home-components/YoutubeVideo.svelte';
-    import CertainJewelry from '../lib/components/home-components/CertainJewelry.svelte';
+    // import CertainJewelry from '../lib/components/home-components/CertainJewelry.svelte';
     import HeaderSection from '../lib/components/home-components/HeaderSection.svelte';
 
     let titleCssMen= "text-transparent capitalize bg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600"
-    let titleCssWomen= "text-transparent capitalize bg-clip-text bg-gradient-to-r from-purple-600 to-pink-400"
+    // let titleCssWomen= "text-transparent capitalize bg-clip-text bg-gradient-to-r from-purple-600 to-pink-400"
     let productCardTypeCssMen = "bg-gradient-to-r from-cyan-600 to-teal-500"
 
     let subCategory = [
