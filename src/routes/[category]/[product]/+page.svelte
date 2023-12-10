@@ -37,7 +37,11 @@
             </div>
             {#if matched}
                 <button disabled class="bg-slate-500 p-5 font-bold text-white rounded ">
-                <a href="https://traxnyc-demo-main.vercel.app/cart">Product Already Added</a>
+                <a href="https://traxnyc-demo-main.vercel.app/cart">
+                    Product Already Added
+                    <br>
+                    <span class="text-xl ">View Basket</span>
+                </a>
                 </button>
             {:else}
                  <button on:click={handleAddtoCart} class="bg-blue-500 p-5 font-bold text-white rounded hover:bg-blue-600">In my Shopping Cart</button>
