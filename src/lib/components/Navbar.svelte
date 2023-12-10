@@ -24,12 +24,12 @@
         {
             name:"My Account",
             icon: "octicon:person-24",
-            url:"https://traxnyc-demo-main.vercel.app/dashboard"
+            url:"https://traxnycnl-prowebmasters.vercel.app/dashboard"
         },
         {
             name:"My Cart",
             icon: "mdi-light:cart",
-            url:"https://traxnyc-demo-main.vercel.app/cart"
+            url:"https://traxnycnl-prowebmasters.vercel.app/cart"
         },
     ]
     let navItemStyle = "py-1 md:py-2 px-2 md:px-3 lg:px-5 lg:py-3  text-sm  transition-all ease-in"
@@ -95,7 +95,7 @@
                     <div class="w-10">
                         <img src="https://d186vdbjetg11u.cloudfront.net/static/media/logo.d6d00ab41593f9e46540095c8affeac4.svg" alt="TRAXNYC">
                     </div>
-                    <h1 class=" font-light text-lg md:text-xl lg:text-3xl">TRAXNYC</h1>
+                    <h1 class=" font-light text-lg md:text-xl lg:text-3xl">ISW Belgium</h1>
                 </a>
                     <button on:click={handleNav} class="text-3xl md:hidden">
                     <Icon icon="radix-icons:cross-1" />
