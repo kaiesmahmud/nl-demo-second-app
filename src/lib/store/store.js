@@ -162,3 +162,4 @@ export let myPurchaseProductsData = writable([])
 export let product_url = writable("")
 export let product_details = writable({})
 
+export let filteredProducts = writable([])
