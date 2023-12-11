@@ -1,11 +1,12 @@
 <script>
+	import { onMount } from 'svelte';
 	import { fetchCartData } from './../../lib/function/fetchCartData.js';
 	import { emptyCartData } from './../../lib/function/emptyCartData.js';
-	import { onMount } from 'svelte';
 	import { myCartData } from './../../lib/store/store.js';
-    
     import { allProductsData } from "../../lib/store/store";
     import PQuantity from '../../lib/components/P_Quantity.svelte';
+    import Popup from '../../lib/components/Popup.svelte';
+
     onMount(()=>{
         fetchCartData();
     })
@@ -51,14 +52,21 @@
         }
     }
 
+    // ======PopUp=============
+    let showPopup = false;
+
+    const handlePopUp = () => {
+    showPopup = true;
+    };
+    
 </script> 
  
 <section class="bg-red-100/50 ">
     <div class="flex items-center justify-between p-3">
         <p class="text-lg p-5 font-bold ">My Cart</p>
-        <a href="https://traxnycnl-prowebmasters.vercel.app/checkout" class="bg-red-500 px-3 py-1 md:px-5 md:py-3 rounded text-white font-bold">
+        <button on:click={handlePopUp} class="bg-red-500 px-3 py-1 md:px-5 md:py-3 rounded text-white font-bold">
             CheckOut
-        </a>
+        </button>
     </div>
     <div class="mb-10 p-2">
         {#if $myCartData.length == 0}
@@ -99,5 +107,7 @@
            {/each}
        </div>
     </div>
-    
+    {#if showPopup}
+        <Popup message="Please hold on you are being Transferred to our main webshop for an Easy Checkout." duration={2000}/>
+    {/if}
 </section>
