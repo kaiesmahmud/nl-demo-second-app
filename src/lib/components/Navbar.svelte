@@ -112,16 +112,21 @@
             </div>
             <div class="flex flex-col my-10 p-5">
                 {#each navItems as item(item.name)}
-                <a href={item.url} class={`${navItemStyle} m-3 border-b-2 border-blue-500 `} on:click={handleNav}>{item.name}</a>
+                <a href={item.url} class={`${navItemStyle} m-3 border-b-2 border-orange-500 `} on:click={handleNav}>{item.name}</a>
                 {/each}
             </div>
             <div class=" mt-20 flex items-center justify-around">
                 {#each myLinks as item(item.name)}
-                 <a href={item.url} class={myLinksStyle} on:click={handleNav}>
+                 <a href={item.url} class={`${myLinksStyle} relative border border-orange-300`} on:click={handleNav}>
                      <div class="text-xl md:text-3xl">
                          <Icon icon={item.icon} />
                      </div>
                      <p >{item.name}</p>
+                     {#if item.url === "/cart"}
+                        <div class=" absolute right-0 top-0 rounded-full p-1 text-xs bg-red-700 font-light aspect-square translate-x-[50%] translate-y-[-50%]">
+                        {$myCartData.length}
+                        </div>
+                    {/if}
                  </a>
                 {/each}
             </div>
