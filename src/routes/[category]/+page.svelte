@@ -5,8 +5,8 @@
 	import { allProductsData, filteredProducts } from './../../lib/store/store.js';
     import Filter from '../../lib/components/Filter.svelte';
     import { onMount } from 'svelte';
-    onMount(()=>{
-        fetchAllProductsData();
+    onMount(async()=>{
+        await fetchAllProductsData();
         console.log($allProductsData)
         filteredProducts.set($allProductsData)
     })
