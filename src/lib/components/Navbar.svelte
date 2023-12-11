@@ -29,7 +29,7 @@
         {
             name:"My Cart",
             icon: "mdi-light:cart",
-            url:"https://traxnycnl-prowebmasters.vercel.app/cart"
+            url:"/cart"
         },
     ]
     let navItemStyle = "py-1 md:py-2 px-2 md:px-3 lg:px-5 lg:py-3  text-sm  transition-all ease-in"
