@@ -1,5 +1,5 @@
 <script>
-	import { fetchCartData } from './../../../lib/function/fetchCardData.js';
+	import { fetchCartData } from '../../../lib/function/fetchCartData.js';
 	import { onMount } from 'svelte';
 	import { addToCart } from './../../../lib/function/addToCart.js';
     import { myCartData, product_details} from "../../../lib/store/store";
@@ -37,7 +37,7 @@
             </div>
             {#if matched}
                 <button disabled class="bg-slate-500 p-5 font-bold text-white rounded ">
-                <a href="https://traxnyc-demo-main.vercel.app/cart">
+                <a href="/cart">
                     Product Already Added
                     <br>
                     <span class="text-xl ">View Basket</span>
