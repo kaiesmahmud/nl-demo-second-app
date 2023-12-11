@@ -5,17 +5,17 @@
     export let decreaseTotalPrice;
     export let product;
     console.log("product is  ", product)
-    let qty = 0;
+    let qty = 1;
     const increaseQty = ()=>{
         qty++
         increaseTotalPrice(parseInt(p_price),product)
     }
     const decreaseQty = ()=>{
-        if(qty < 0){
-            alert("Quantity cannot be less than 0")
-        }else if(qty == 0){
-            alert("Quantity cannot be less than 0")
-            qty = 0
+        if(qty < 1){
+            alert("Quantity cannot be less than 1")
+        }else if(qty == 1){
+            alert("Quantity cannot be less than 1")
+            qty = 1
             // decreaseTotalPrice(parseInt(p_price),qty)
         }else{
             decreaseTotalPrice(parseInt(p_price),product)
