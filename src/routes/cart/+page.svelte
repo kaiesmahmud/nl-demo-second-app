@@ -7,50 +7,11 @@
     import PQuantity from '../../lib/components/P_Quantity.svelte';
     import Popup from '../../lib/components/Popup.svelte';
 
-    onMount(()=>{
-        fetchCartData();
+    onMount(async()=>{
+        await fetchCartData();
     })
     console.log( $allProductsData)
-    let total = 0,checkOutItemCount = 0, pendingOrderConfirm = []
 
-    const increaseTotalPrice = (newItemPrice,product) =>  {
-        console.log(pendingOrderConfirm)
-        let addProduct = $myCartData.filter(i=> i.p_id == product.p_id)[0]
-        total +=newItemPrice 
-        checkOutItemCount ++
-        addProduct = {
-            ...addProduct,
-            p_total_price:(addProduct?.p_total_price || 0) + newItemPrice ,
-            p_quantity:(addProduct?.p_quantity || 0) + 1
-        }
-        if(pendingOrderConfirm.length == 0){
-            pendingOrderConfirm.push(addProduct)
-        }else{
-            let index = pendingOrderConfirm.findIndex(i=> i.p_id == product.p_id)
-            if(index == -1){
-                pendingOrderConfirm.push(addProduct)
-            }else{
-                pendingOrderConfirm[index] = addProduct
-            }
-        }
-    }
-    const decreaseTotalPrice = (removeItemPrice,product) =>{
-        console.log(pendingOrderConfirm)
-
-        let addProduct = $myCartData.filter(i=> i.p_id == product.p_id)[0]
-
-        if(total == 0 && checkOutItemCount == 0){
-            alert("No items in cart")
-        }else{
-            total -= removeItemPrice
-            checkOutItemCount --
-            addProduct = {
-                ...addProduct,
-                p_total_price:(addProduct?.p_total_price || 0) - removeItemPrice,
-                p_quantity:(addProduct?.p_quantity || 0) - 1
-            }
-        }
-    }
 
     // ======PopUp=============
     let showPopup = false;
@@ -73,7 +34,7 @@
              <h1>No Products Selected</h1>
         {/if}
        <div class="flex flex-col gap-3">
-           {#each $myCartData as {p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}}
+           {#each $myCartData as {p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_quantity}}
                 <div class="p-2 bg-white shadow rounded">
                    <div class="flex flex-col md:flex-row items-center justify-between gap-2">
                        <div  class="flex flex-col md:flex-row items-center gap-2">
@@ -93,12 +54,9 @@
                                <p><span class="font-bold" >Name: </span>{p_name}</p>
                            </div>
                        </div>
-                       <div class="w-[300px]">
+                       <div class="w-[300px] flex flex-col items-center">
                            <PQuantity 
-                           {decreaseTotalPrice} 
-                           {increaseTotalPrice } 
-                           {p_price}
-                           product={{p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_stock}}
+                           product={{p_id,p_name,p_url,cat_id,cat_name,p_price,p_img,p_type,p_reg_price,p_quantity}}
                            />
                            <button on:click={()=>{emptyCartData(p_id)}} class="bg-red-500 rounded p-1 text-xs font-extrabold text-white px-3">Remove Product</button>
                        </div>
