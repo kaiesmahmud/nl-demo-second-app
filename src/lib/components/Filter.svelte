@@ -32,10 +32,15 @@
                 console.log("women-collection", filteredProducts)
                 break;
             case "special-offer":
-                console.log("men-collection")
+                f_data = $allProductsData.filter(i=> i.cat_name === "special-offer")
+                filteredProducts.set(f_data)
+                console.log("women-collection", filteredProducts)
                 break;
             case "custom-jewelry":
-                console.log("men-collection")
+                console.log("custom-jewelry")
+                f_data = $allProductsData.filter(i=> i.cat_name === "custom")
+                filteredProducts.set(f_data)
+                console.log("women-collection", filteredProducts)
                 break;
             default:
                 break;
