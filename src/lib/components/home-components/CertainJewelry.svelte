@@ -12,14 +12,14 @@
     <section class="w-full ">
         <div class=" grid grid-cols-2 md:grid-cols-4 gap-1 p-5">
             {#each data as {name,url}}
-                <div class="rounded overflow-hidden text-center text-xl md:text-2xl capitalize z-[10]">
+                <a href="/women-collection" class="rounded overflow-hidden text-center text-xl md:text-2xl capitalize z-[10]">
                     <div class=" overflow-hidden relative aspect-square flex items-end">
                         <img class=" absolute top-0 w-full h-full hover:scale-110 transition-all ease-in z-[-1]" src={url} alt={name}>
                         <div class="p-2 bg-orange-200/30 z-[10] w-full">
                             {name}
                         </div>
                     </div>
-                </div>
+                </a>
             {/each}
         </div>
     </section>

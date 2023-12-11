@@ -15,10 +15,10 @@
         </div>
         <div class="flex flex-col gap-5 p-5  md:p-10 lg:p-2">
             {#each data as {title,img,color}}
-                 <div class="flex rounded overflow-hidden shadow">
+                 <a href="/women-collection" class="flex rounded overflow-hidden shadow">
                      <img class="w-1/2 " src={img} alt={title}>
                      <p class={`${color} text-xl md:text-3xl flex items-center justify-center text-center w-full`}>{title}</p>
-                 </div>
+                 </a>
             {/each}
             
         </div>
