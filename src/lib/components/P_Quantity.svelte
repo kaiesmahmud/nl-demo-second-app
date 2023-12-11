@@ -29,9 +29,6 @@
         <button on:click={decreaseQty} class="px-3 py-1 md:px-5 bg-red-500 rounded flex items-center gap-2">
             <Icon icon="ic:baseline-minus" />
         </button>
-        <!-- <p class="text-black">
-            {qty}
-        </p> -->
         <button on:click={increaseQty} class="px-3 py-1 md:px-5 bg-green-500 rounded text-xl flex items-center gap-2">
             <Icon icon="ic:baseline-plus" />
         </button>
