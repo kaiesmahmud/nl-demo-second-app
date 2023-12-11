@@ -11,8 +11,11 @@
     onDestroy(() => clearTimeout(timer));
   </script>
   
-  <div class="popup backdrop-blur-2xl font-extrabold ">
-    <p class="w-[80%] md:w-auto p-5 bg-black/40 rounded ">{message}</p>
+  <div class="popup backdrop-blur-2xl font-bold  p-3">
+    <div class="w-[300px] md:w-[400px] p-5 bg-gradient-to-r from-cyan-500 to-violet-500 rounded flex  gap-5 flex-col items-center text-center shadow-lg">
+      <img class="w-20" src="https://d186vdbjetg11u.cloudfront.net/static/media/logo.d6d00ab41593f9e46540095c8affeac4.svg" alt="">
+      <p class="    ">{message}</p>
+    </div>
   </div>
   
   <style>
