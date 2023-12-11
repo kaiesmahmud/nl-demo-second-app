@@ -1,5 +1,4 @@
 <script>
-    import Icon from '@iconify/svelte';
     import CertainJewelry from './CertainJewelry.svelte';
 </script>
 
@@ -11,6 +10,4 @@
     <div class="w-full md:w-[75%] shadow-lg bg-gradient-to-b from-orange-50 to-orange-200 z-10 rounded md:p-5">
         <CertainJewelry/>
     </div>
-
-
 </div>

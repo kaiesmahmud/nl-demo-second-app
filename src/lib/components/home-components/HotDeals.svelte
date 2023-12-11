@@ -4,7 +4,6 @@
         {title:"Best Silver Rings" , img:"/lux-2.png",color: "bg-gray-100"},
         {title:"Best Diamond Rings" , img:"/lux-3.png",color: "bg-gray-100"},
     ]
-
 </script>
 
 <div class="flex flex-col items-center justify-center">
@@ -20,7 +19,6 @@
                      <p class={`${color} text-xl md:text-3xl flex items-center justify-center text-center w-full`}>{title}</p>
                  </a>
             {/each}
-            
         </div>
     </section>
 </div>
