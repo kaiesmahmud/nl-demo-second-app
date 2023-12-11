@@ -1,5 +1,8 @@
 <script>
+    import { onMount } from 'svelte';
+	import { myCartData } from './../store/store.js';
     import Icon from '@iconify/svelte';
+    import { fetchCartData } from '../function/fetchCartData.js';
     let navItems = [
         {
             name:"Men's Collection", url:"/men-collection"
@@ -33,13 +36,14 @@
         },
     ]
     let navItemStyle = "py-1 md:py-2 px-2 md:px-3 lg:px-5 lg:py-3  text-sm  transition-all ease-in"
-    let myLinksStyle = "flex gap-3 md:gap-0 items-center md:justify-center px-3 py-1 font-semibold transition-all ease-in rounded-full  lg:bg-white hover:bg-blue-200 "
+    let myLinksStyle = "flex gap-3 md:gap-0 items-center md:justify-center px-3 py-1 font-semibold transition-all ease-in rounded-full  lg:bg-white hover:bg-orange-200 "
 
     let showNav = false ;
     const handleNav = ()=> showNav=!showNav
-    const handleGoto = ()=>{
 
-    }
+    onMount(async()=>{
+        await fetchCartData();
+    })
 </script>
 
 <div class="bg-white text-xs relative z-[101] ">
@@ -71,11 +75,16 @@
         <div class="flex items-center">
             <div class="flex items-center gap-2 md:gap-4">
                 {#each myLinks as item(item.name)}
-                     <a href={item.url} class={myLinksStyle}>
+                     <a href={item.url} class={`${myLinksStyle} relative border border-orange-300`}>
                          <div class="text-xl md:text-2xl text-orange-500">
                              <Icon icon={item.icon} />
                          </div>
                          <p class=" hidden lg:inline-block font-light">{item.name}</p>
+                         {#if item.url === "/cart"}
+                             <div class=" absolute right-0 top-0 rounded-full p-1 text-xs bg-red-200 font-light aspect-square translate-x-[50%] translate-y-[-50%]">
+                                {$myCartData.length}
+                             </div>
+                         {/if}
                      </a>
                 {/each}
             </div>
