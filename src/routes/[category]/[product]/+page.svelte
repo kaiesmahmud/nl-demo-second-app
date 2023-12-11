@@ -15,7 +15,7 @@
             alert("Product already added to cart")
             return
         }else{
-            addToCart( $product_details.cat_id, $product_details.cat_name,$product_details.p_id,$product_details.p_img,$product_details.p_name,$product_details.p_price,$product_details.p_reg_price,$product_details.p_stock,$product_details.p_type,$product_details.p_url)
+            addToCart( $product_details.cat_id, $product_details.cat_name,$product_details.p_id,$product_details.p_img,$product_details.p_name,$product_details.p_price,$product_details.p_reg_price,$product_details.p_type,$product_details.p_url)
         }
     }
 </script>
